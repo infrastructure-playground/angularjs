@@ -4,6 +4,7 @@ WORKDIR /usr/src/app
 EXPOSE 4200
 RUN apt-get update && \
     apt-get install vim -y && \
+    npm i -g npm && \
     npm install -g @angular/cli
 
 CMD ping google.com

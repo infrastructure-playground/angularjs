@@ -3,8 +3,6 @@ import {Routes, RouterModule} from '@angular/router';
 
 import {RegistrationComponent} from './auth/registration/registration.component';
 import {LoginComponent} from './auth/login/login.component';
-import {PubnubComponent} from './chat/pubnub/pubnub.component';
-import {ChatFirebaseComponent} from './chat/chat-firebase/chat-firebase.component';
 import {LogoutComponent} from './auth/logout/logout.component';
 import {InventoryComponent} from './inventory/inventory.component';
 import {BooksComponent} from './inventory/books/books.component';
@@ -20,8 +18,6 @@ const appRoutes: Routes = [
   { path: 'login', canActivate: [LoginGuard], component: LoginComponent},
   { path: 'register', canActivate: [LoginGuard], component: RegistrationComponent },
   { path: 'logout', canActivate: [AuthGuard], component: LogoutComponent},
-  { path: 'chat/pubnub', component: PubnubComponent },
-  { path: 'chat/firebase', component: ChatFirebaseComponent },
   { path: 'inventory', canActivate: [AuthGuard], canActivateChild: [AuthGuard], component: InventoryComponent, children: [
       { path: 'books', component: BooksComponent, children: [
           { path: '', component: BookListComponent },

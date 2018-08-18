@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-sm navbar-light navbar-bg">
+  <button class="navbar-toggler"
+          type="button" data-toggle="collapse"
+          data-target="#nav-content"
+          aria-controls="nav-content"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Brand -->
+  <a class="navbar-brand" routerLink="/">Logo</a>
+
+  <!-- Links -->
+  <div class="collapse navbar-collapse justify-content-end" id="nav-content">
+    <ul class="navbar-nav">
+      <ng-template [ngIf]="!authService.isAuthenticated()">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/register">
+            Register
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+            routerLink="/">
+            Login
+          </a>
+        </li>
+      </ng-template>
+      <ng-template [ngIf]="authService.isAuthenticated()">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/inventory/books">
+            Books
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            skipLocationChange="true"
+            routerLink="/logout">
+            Logout
+          </a>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</nav>

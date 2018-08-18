@@ -1,0 +1,26 @@
+<form class="form-crud" (ngSubmit)="onUpdateBook(f)" #f="ngForm">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      class="form-control"
+      required
+      ngModel
+      #name="ngModel">
+    <span class="help-block alert-warning" *ngIf="!name.valid && name.touched">* Please enter a name</span>
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input
+      type="text"
+      id="description"
+      name="description"
+      class="form-control"
+      ngModel
+      #description="ngModel">
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="!f.valid" >Update</button>
+</form>
+<app-book-list></app-book-list>

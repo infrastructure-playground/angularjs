@@ -1,0 +1,11 @@
+<div class="offset-md-3 col-lg-6">
+  <table class="table table-striped">
+    <tbody>
+    <tr *ngFor="let desc of book | keyvalue">
+      <th>{{desc.key}}</th>
+      <td>{{desc.value}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<app-book-list></app-book-list>

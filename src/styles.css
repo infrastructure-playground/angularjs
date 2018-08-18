@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.form-authentication, .form-crud {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.clickable-hover {
+  cursor: pointer;
+  color: #05728f !important;
+}

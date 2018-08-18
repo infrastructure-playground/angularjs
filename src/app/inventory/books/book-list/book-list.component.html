@@ -1,0 +1,35 @@
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books">
+    <td>{{book.name}}</td>
+    <td>{{book.description}}</td>
+    <td class="text-center">
+      <a
+        class="fa fa-eye clickable-hover"
+        (click)="onGetBook(book.id)"
+      >
+      </a>
+      &nbsp;
+      <a
+        class="fa fa-edit clickable-hover"
+        (click)="onUpdateBook(book.id)"
+      >
+      </a>
+      &nbsp;
+      <a
+        class="fa fa-remove clickable-hover"
+        (click)="onDeleteBook(book.id)"
+      >
+
+      </a>
+    </td>
+  </tr>
+  </tbody>
+</table>

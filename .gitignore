@@ -1,5 +1,24 @@
-.DS_Store
-node_modules/
+# Outputs
+bazel-*
+test-project-host-*
 dist/
-npm-debug.log
+
+# IDEs
+.idea/
+jsconfig.json
+.vscode/
+
+# Typings file.
+typings/
+
+# Misc
+coverage/
+node_modules/
+tmp/
+npm-debug.log*
+yarn-error.log*
+.ng_pkg_build/
+
+# Mac OSX Finder files.
+**/.DS_Store
 .DS_Store

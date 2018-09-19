@@ -3,18 +3,15 @@ export class User {
   public password: string;
   public email: string;
   public first_name: string;
-  public middle_name: string;
   public last_name: string;
   public token: string;
 
   constructor(username: string, password: string, email: string,
-              first_name: string, middle_name: string, last_name: string,
-              token: string) {
+              first_name: string, last_name: string, token: string) {
     this.username = username;
     this.password = password;
     this.email = email;
     this.first_name = first_name;
-    this.middle_name = middle_name;
     this.last_name = last_name;
     this.token = token;
   }

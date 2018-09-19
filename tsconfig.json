@@ -15,6 +15,11 @@
     "lib": [
       "es2017",
       "dom"
-    ]
-  }
+    ],
+  },
+  "files": [
+    "src/app/app.module.ts",
+    "src/polyfills.ts",
+    "src/main.ts"
+  ]
 }
